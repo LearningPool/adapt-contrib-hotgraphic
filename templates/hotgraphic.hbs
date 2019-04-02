@@ -34,13 +34,13 @@
                 <img src="{{_graphic.src}}" aria-label="{{_graphic.alt}}" tabindex="0"/>
               </div>
               {{#if _graphic.attribution}}
-                <div class="graphic-attribution">{{{_graphic.attribution}}}</div>
+                <div class="graphic-attribution">{{_graphic.attribution}}</div>
               {{/if}}
             </div>
             <div class="hotgraphic-item-content">
               <div class="hotgraphic-item-content-inner">
                 <div class="hotgraphic-content-title" role="heading" aria-level="5" tabindex="0">
-                  {{{title}}}
+                  {{title}}
                 </div>
                 <div class="hotgraphic-content-body">
                   {{{a11y_text body}}}
@@ -62,7 +62,7 @@
       {{else}}
         <img src="{{_graphic.src}}" aria-label="{{_graphic.alt}}" tabindex="0"/>
         {{#if _graphic.attribution}}
-          <div class="graphic-attribution">{{{_graphic.attribution}}}</div>
+          <div class="graphic-attribution">{{_graphic.attribution}}</div>
         {{/if}}
         {{#each _items}}
           <button class="base hotgraphic-graphic-pin component-item-text-color item-{{@index}} {{#if _isVisited}}visited{{/if}}" data-id="item-{{@index}}" style="top:{{{_top}}}%; left:{{{_left}}}%;" role="button" aria-label="Item {{numbers @index}}. {{title}}.{{#if _isVisited}} {{../../_globals._accessibility._ariaLabels.visited}}.{{/if}}">
